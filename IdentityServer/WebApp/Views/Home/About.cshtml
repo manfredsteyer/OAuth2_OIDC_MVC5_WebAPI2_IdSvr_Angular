@@ -1,0 +1,20 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+
+<dl>
+    @foreach (var claim in Model)
+    {
+        <dt>@claim.Type</dt>
+        <dd>@claim.Value</dd>
+    }
+</dl>
+
+<h2>Gutscheine</h2>
+<div>
+    <ul>
+        <li>@Html.ActionLink("Gutschein für € 50 kaufen", "BuyVoucher", new { amount = 50 })</li>
+        <li>@Html.ActionLink("Gutschein für € 100 kaufen", "BuyVoucher", new { amount = 100 })</li>
+    </ul>
+    
+
+
+</div>
